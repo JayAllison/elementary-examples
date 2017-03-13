@@ -11,7 +11,7 @@ make "grid_size 5
 ; how much space is in between each square
 make "spacer 10
 
-; a prodecure to draw a square of the given size and at the specified position
+; a prodecure to draw a square of the given size centered at the specified position
 to draw_square :side :xcenter :ycenter
   make "offset :side/2
   pu
@@ -42,10 +42,10 @@ END
 
 ; a procedure to draw a grid of squares centered on the turtle's current position
 TO draw_grid :size :side :spacing
-  make "start_scale (:size/2)-(:size%2/2)
+  make "start_scale (:size*:side + (:size-1)*:spacing)/2
   make "jump :side+:spacing
-  make "xpos xcor-(:start_scale*:jump)
-  make "ypos ycor-(:start_scale*:jump)
+  make "xpos xcor-:start_scale+(:side/2)
+  make "ypos ycor-:start_scale+(:side/2)
   repeat :size [
     pu
     setxy :xpos :ypos
