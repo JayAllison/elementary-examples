@@ -1,2 +1,4 @@
-# elementary-examples
-Source code examples from elementary school demonstrations
+# Elementary School Coding Examples
+This repository contains coding examples for many different types of coding.
+
+
