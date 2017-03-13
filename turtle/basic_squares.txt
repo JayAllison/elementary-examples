@@ -1,0 +1,23 @@
+; draw a simple black square, one side at a time
+; the turtle should end up back where it started
+clearscreen
+setcolor 0
+forward 100
+right 90
+forward 100
+right 90
+forward 100
+right 90
+forward 100
+right 90
+
+; color the square yellow
+penup
+setxy 50 50
+setcolor 6
+fill
+home
+pendown
+
+; draw a red square, using a loop this time
+setcolor 4 repeat 4 [ fd 50 lt 90 ]

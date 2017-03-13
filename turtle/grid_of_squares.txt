@@ -1,0 +1,61 @@
+; an example turtle script to draw a grid of squares, centered around home, and then color each one randomly
+; this script uses procedures and variables
+cs
+
+; how long the side of each square is
+make "side_length 50
+
+; how wide & tall the grid of squares is
+make "grid_size 5
+
+; how much space is in between each square
+make "spacer 10
+
+; a prodecure to draw a square of the given size and at the specified position
+to draw_square :side :xcenter :ycenter
+  make "offset :side/2
+  pu
+  make "startx :xcenter-:offset
+  make "starty :ycenter-:offset
+  setxy :startx :starty
+  pd repeat 4 [
+    fd :side
+    rt 90
+  ]
+  pu
+  setxy :xcenter :ycenter
+  setcolor random 15
+  fill
+  setcolor 0
+end
+
+; a procedure to draw a row of squares starting where the turtle is
+to draw_row :size :side :spacing
+  make "jump :side+:spacing
+  make "xrow xcor
+  make "yrow ycor
+  repeat :size [
+    draw_square :side :xrow :yrow
+    make "xrow :xrow+:jump
+  ]
+END
+
+; a procedure to draw a grid of squares centered on the turtle's current position
+TO draw_grid :size :side :spacing
+  make "start_scale (:size/2)-(:size%2/2)
+  make "jump :side+:spacing
+  make "xpos xcor-(:start_scale*:jump)
+  make "ypos ycor-(:start_scale*:jump)
+  repeat :size [
+    pu
+    setxy :xpos :ypos
+    draw_row :size :side :spacing
+    make "ypos :ypos+:jump
+  ]
+END
+
+; call the main procedure to do all of the work
+draw_grid :grid_size :side_length :spacer
+
+; return home, which should be the center of the grid
+pu home

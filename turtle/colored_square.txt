@@ -1,0 +1,19 @@
+; an example turtle script to draw a square and then color it
+; this script uses arithmetic and variables
+cs
+
+; how long the side of each square is
+make "side_length 50
+
+; draw center square centered on home
+make "offset :side_length/2
+pu
+setxy :offset*-1 :offset*-1
+pd
+repeat 4 [ fd :side_length rt 90 ]
+
+; now go back to where we started
+pu fd :offset rt 90 fd :offset pd
+setcolor random 15
+fill
+setcolor 0
