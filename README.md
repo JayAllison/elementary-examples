@@ -10,4 +10,8 @@ Many Logo tutorials are available at [https://turtleacademy.com/](https://turtle
 
 The `\turtle` folder contains examples that can be used at [https://turtleacademy.com/program/new/en_US](https://turtleacademy.com/program/new/en_US)
 
+Learn how to draw pictures like this:
+
+![alt text](https://github.com/JayAllison/elementary-examples/raw/master/turtle/squares.png "Turtle Squares" )
+
 ## More to come...
