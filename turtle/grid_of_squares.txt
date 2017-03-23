@@ -11,7 +11,7 @@ make "grid_size 5
 ; how much space is in between each square
 make "spacer 10
 
-; a prodecure to draw a square of the given size centered at the specified position
+; a procedure to draw a square of the given size centered at the specified position
 to draw_square :side :xcenter :ycenter
   make "offset :side/2
   pu
