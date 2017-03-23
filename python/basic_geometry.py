@@ -32,7 +32,7 @@ def draw_randomly_colored_square(the_turtle, side_length):
     offset = side_length / 2
     x, y = the_turtle.position()
     the_turtle.penup()
-    the_turtle.goto(x-offset, y-offset)
+    the_turtle.goto(x-offset, y+offset)
     random_color = (random.random(), random.random(), random.random())
     draw_polygon(the_turtle, 4, side_length, random_color)
     the_turtle.penup()
@@ -55,13 +55,15 @@ def draw_row_of_squares(the_turtle, square_count, square_size, square_spacing):
 # the specified turtle will draw a grid of squares centered around its current position
 def draw_grid_of_randomly_colored_squares(the_turtle, grid_size, square_size, square_spacing):
 
+    original_color = the_turtle.color()
     x, y = the_turtle.position()
     starting_offset = ((grid_size * square_size) + ((grid_size - 1) * square_spacing)) / 2
     x2 = x - starting_offset + (square_size / 2)
-    y2 = y - starting_offset + (square_size / 2) + square_size
+    y2 = y - starting_offset + (square_size / 2)
     jump = square_size + square_spacing
     for i in range(grid_size):
         the_turtle.penup()
         the_turtle.goto(x2, y2 + i*jump)
         draw_row_of_squares(the_turtle, grid_size, square_size, square_spacing)
     the_turtle.goto(x, y)
+    the_turtle.color(original_color[0])
