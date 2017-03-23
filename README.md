@@ -23,17 +23,18 @@ Learn how to draw pictures like this:
 ## Python turtle
 Python is a great programming language for learning text-based programming, and it is supported on many platforms. I'm assuming that you are running Python on your Raspberry Pi or other Linux machine, so I'm going to give you instructions for Linux setup, although the installation instructions will likely work under Windows, too, once you have installed python and pip.
 
-Run these commands to make sure everything is up to date:
+Run these commands to make sure everything is up to date (these apply only to Linux, not to Windows):
 ```commandline
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-Now run these commands to install iPython (an interactive Python shell)
+Now run these commands to install iPython, an interactive Python shell (this should work on Linux and Windows, if python and pip are already installed)
 ```commandline
 sudo pip install python-dev
 sudo pip install ipython
 ```
+_Note: on Windows, leave off the ``sudo`` keyword._
 
 Now you can run Python interactively, including tab completion, by typing:
 
@@ -46,6 +47,14 @@ You can then enter commands into ipython. Some of the examples included in the '
 Here's an example of what you can do with turtle in Python:
 
 ![alt text](https://github.com/JayAllison/elementary-examples/raw/master/python/squares.png "Python Turtle Squares" )
+
+If you change to the directory that contains the python files and open interactive python using the ``ipython`` command, then you can draw this image by entering these commands:
+
+```python
+from basic_geometry import *
+my_turtle = turtle.Turtle()
+draw_grid_of_randomly_colored_squares(my_turtle, 5, 50, 10)
+```
 
 ## Python and Minecraft Pi
 
