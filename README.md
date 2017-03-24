@@ -7,7 +7,9 @@ Even these words are an example of coding! This page is formattted using [markdo
 
 Scratch is a graphical programming language for beginners - you can do it online or download it to install.
 
-When you get more advanced with Scratch and you want to work in a 3D world, on the Raspberry Pi you can interface to Minecraft.
+The polygon examples in the scratch folder are similar to the other languages, except that Scratch 1.4 does not support procedures (aka functions or methods) so the code is less structured and contains more duplication.
+
+When you get more advanced with Scratch and you want to work in a 3D world, on the Raspberry Pi you can interface to Minecraft. Check out: https://github.com/scratch2mcpi/scratch2mcpi
 
 ## Logo turtle
 The Logo programming language has been used for decades to visualize programming for beginners.
