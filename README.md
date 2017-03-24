@@ -9,11 +9,11 @@ Scratch is a graphical programming language for beginners - you can do it online
 
 The polygon example files in the scratch folder are from Scratch 1.4. That is the original offline version and the version that comes on the Raspberry Pi. The polygon examples are similar to the other languages' examples here, except that Scratch 1.4 does not support procedures (aka functions or methods) so the code is less structured and contains more duplication.
 
-When you get more advanced with Scratch and you want to work in a 3D world, on the Raspberry Pi you can interface to Minecraft. Check out: https://github.com/scratch2mcpi/scratch2mcpi
+When you get more advanced with Scratch and you want to work in a 3D world, on the Raspberry Pi you can interface to Minecraft. For more information, check out: [https://github.com/scratch2mcpi/scratch2mcpi](https://github.com/scratch2mcpi/scratch2mcpi).
 
 ## Logo turtle
 
-The Logo programming language has been used for decades to visualize programming for beginners.
+The Logo text-based programming language has been used for decades to visualize programming for beginners.
  
 Many Logo tutorials are available at [https://turtleacademy.com/](https://turtleacademy.com/)
 
@@ -71,3 +71,11 @@ sudo pip install mcpi
 ```
 
 Then, you can use the minecraft examples in the `/python` folder to explore and create.
+
+## How to download these examples
+
+You can use git to clone this repository:
+
+``git clone https://github.com/JayAllison/elementary-examples``
+
+If you are not familiar with how to use git to clone this repository, then you can just browse the folders above to find the file you want. Once you are viewing the file, you can click the ``Raw`` button to view the file in its original form, then you can use your browser to save that file.
